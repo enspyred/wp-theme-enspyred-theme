@@ -66,8 +66,8 @@ npm run sync-version
 # Step 3: Build and package
 echo -e "\n${BLUE}Step 3: Building and packaging theme...${NC}"
 npm run package
-echo -e "${GREEN}✓ Clean distribution created in ../../../dist/enspyred-theme/${NC}"
-echo -e "${GREEN}✓ ZIP file created: ../../../dist/enspyred-theme.zip${NC}"
+echo -e "${GREEN}✓ Clean distribution created in ./dist/enspyred-theme/${NC}"
+echo -e "${GREEN}✓ ZIP file created: ./dist/enspyred-theme.zip${NC}"
 
 # Step 4: Git commit and tag
 echo -e "\n${BLUE}Step 4: Creating git commit and tag...${NC}"
@@ -99,8 +99,8 @@ echo -e "${YELLOW}📋 Next steps:${NC}"
 echo -e "   1. Go to: ${BLUE}https://github.com/enspyred/wp-theme-enspyred-theme/releases/new${NC}"
 echo -e "   2. Select tag: ${BLUE}v${NEW_VERSION}${NC}"
 echo -e "   3. Title: ${BLUE}Version ${NEW_VERSION}${NC}"
-echo -e "   4. Attach file: ${BLUE}dist/enspyred-theme.zip${NC}"
+echo -e "   4. Attach file: ${BLUE}./dist/enspyred-theme.zip${NC}"
 echo -e "   5. Publish release\n"
 
 echo -e "${GREEN}Distribution ZIP location:${NC}"
-echo -e "   $(cd ../../../dist && pwd)/enspyred-theme.zip\n"
+echo -e "   $(cd dist && pwd)/enspyred-theme.zip\n"

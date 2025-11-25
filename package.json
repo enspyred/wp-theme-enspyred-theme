@@ -11,7 +11,7 @@
         "sync-version": "node sync-version.js",
         "prepackage": "npm run sync-version",
         "package": "npm run build && npm run package:create",
-        "package:create": "rm -rf ../../../dist/enspyred-theme && mkdir -p ../../../dist/enspyred-theme && rsync -av --exclude-from=.distignore . ../../../dist/enspyred-theme/ && cd ../../../dist && zip -r enspyred-theme.zip enspyred-theme && find enspyred-theme -name '.DS_Store' -delete"
+        "package:create": "rm -rf dist/enspyred-theme && mkdir -p dist/enspyred-theme && rsync -av --exclude-from=.distignore . dist/enspyred-theme/ && cd dist && zip -r enspyred-theme.zip enspyred-theme && find enspyred-theme -name '.DS_Store' -delete"
     },
     "dependencies": {
         "prop-types": "^15.8.1",
