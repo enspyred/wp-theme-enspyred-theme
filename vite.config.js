@@ -2,14 +2,19 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
+import { readFileSync } from "fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const port = 5137;
+const pkg = JSON.parse(
+    readFileSync(resolve(__dirname, "package.json"), "utf-8")
+);
 
 export default defineConfig({
     plugins: [react()],
     define: {
         "process.env": {}, // Avoids undefined env for styled-components
+        __THEME_VERSION__: JSON.stringify(pkg.version),
     },
     server: {
         host: "0.0.0.0",
